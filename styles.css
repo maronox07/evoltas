@@ -636,14 +636,19 @@ main {
   font-size: clamp(2.8rem, 3.4vw, 4.6rem);
   line-height: 1.04;
   text-wrap: balance;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy {
   max-width: 760px;
+  position: relative;
 }
 
 .hero-notes {
   max-width: 560px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy p,
@@ -652,6 +657,8 @@ main {
 .customer-card p,
 .validation-card p {
   max-width: 62ch;
+  position: relative;
+  z-index: 1;
 }
 
 .lead {
@@ -671,6 +678,8 @@ main {
   background: rgba(43, 228, 255, 0.18);
   color: var(--accent);
   margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-group {
@@ -678,6 +687,8 @@ main {
   flex-wrap: wrap;
   gap: 16px;
   margin: 18px 0 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-group.center {
@@ -689,6 +700,8 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
   margin-top: 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .stat-card {
@@ -785,14 +798,18 @@ main {
 
 .hireon-watermark {
   position: absolute;
-  top: -8%;
-  right: 6%;
   width: clamp(220px, 26vw, 380px);
   height: auto;
   opacity: 0.28;
   filter: drop-shadow(0 0 30px rgba(43, 228, 255, 0.35));
   pointer-events: none;
   z-index: 0;
+}
+
+.hero-copy-mark {
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-bento {
@@ -982,7 +999,12 @@ main {
   font-size: 0.85rem;
   color: var(--muted);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 12px;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
 }
 
 .bento-title {
@@ -1617,9 +1639,9 @@ section[id] {
   }
 
   .hireon-watermark {
-    top: -6%;
-    right: 50%;
-    transform: translateX(50%);
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     width: clamp(180px, 40vw, 260px);
     opacity: 0.2;
   }
