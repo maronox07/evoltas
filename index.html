@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evoltas | HireOn</title>
+  <meta name="description" content="HireOn by Evoltas is a mobile-first SaaS hiring platform designed to reduce friction in job applications and improve employer screening efficiency." />
+  <meta name="theme-color" content="#05080c" />
+  <link rel="icon" href="logo2.png" />
+  <link rel="preload" as="image" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-core">
+      <img class="preloader-logo" src="logo.png" alt="Evoltas logo" decoding="async" fetchpriority="high" />
+      <span class="preloader-glow" aria-hidden="true"></span>
+      <span class="preloader-orbit orbit-1" aria-hidden="true"></span>
+      <span class="preloader-orbit orbit-2" aria-hidden="true"></span>
+      <div class="preloader-dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="preloader-text">Evoltas</span>
+      <span class="preloader-motto">Evolution starts here</span>
+      <span class="preloader-status">Initializing systems</span>
+    </div>
+  </div>
+  <div class="ambient" aria-hidden="true">
+    <span class="glow g1"></span>
+    <span class="glow g2"></span>
+    <span class="glow g3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img class="logo-mark" src="logo.png" alt="Evoltas logo" decoding="async" fetchpriority="high" />
+        <div class="logo-text">
+          <span class="logo-title">Evoltas</span>
+          <span class="logo-sub">HireOn</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#customer">Customer</a>
+        <a href="#solution">Solution</a>
+        <a href="#product">Product</a>
+        <a href="#technology">Technology</a>
+        <a href="#market">Market</a>
+        <a href="#differentiation">Differentiation</a>
+        <a href="#validation">Validation</a>
+        <a href="#team">Team</a>
+      </nav>
+      <div class="header-actions">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer">
+          <span class="sr-only">Open navigation</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <div class="header-cta">
+          <a class="btn ghost magnetic" href="2026%20RBPC%20Executive%20Summary.pdf">View summary</a>
+          <a class="btn primary magnetic" href="mailto:dc2368@msstate.edu?subject=Evoltas%20Demo%20Request">Book a demo</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" data-nav-close></div>
+  <aside class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <span>Navigate</span>
+      <button class="nav-close" type="button" data-nav-close>
+        <span class="sr-only">Close navigation</span>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="nav-drawer-links">
+      <a href="#problem">Problem</a>
+      <a href="#customer">Customer</a>
+      <a href="#solution">Solution</a>
+      <a href="#product">Product</a>
+      <a href="#technology">Technology</a>
+      <a href="#market">Market</a>
+      <a href="#differentiation">Differentiation</a>
+      <a href="#validation">Validation</a>
+      <a href="#team">Team</a>
+    </div>
+    <div class="nav-drawer-cta">
+      <a class="btn primary" href="mailto:dc2368@msstate.edu?subject=Evoltas%20Demo%20Request">Book a demo</a>
+      <a class="btn ghost" href="2026%20RBPC%20Executive%20Summary.pdf">Open summary</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="pill">2026 RBPC Executive Summary</div>
+          <h1>HireOn is a mobile-first SaaS hiring platform designed to reduce friction and improve screening efficiency.</h1>
+          <p class="lead">
+            Evoltas is a technology company focused on building innovations that make everyday life more efficient and
+            accessible. Guided by the motto "Together Forward," Evoltas develops practical, user-centered solutions that
+            address real-world challenges.
+          </p>
+          <div class="cta-group">
+            <a class="btn primary magnetic" href="2026%20RBPC%20Executive%20Summary.pdf">Open executive summary</a>
+            <a class="btn ghost magnetic" href="#technology">Explore product and technology</a>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card" data-reveal>
+              <div class="stat-value" data-count="67" data-suffix="%">67%</div>
+              <div class="stat-label">of job applications completed on mobile in 2021</div>
+            </div>
+            <div class="stat-card" data-reveal>
+              <div class="stat-value" data-count="90" data-suffix="%">90%</div>
+              <div class="stat-label">of job seekers use mobile in some aspect of their search</div>
+            </div>
+            <div class="stat-card" data-reveal>
+              <div class="stat-value" data-count="3" data-suffix="x">3x</div>
+              <div class="stat-label">increase in applications per job from Jan 2021 to Apr 2023</div>
+            </div>
+          </div>
+        <div class="hero-notes">
+          <span>Mobile-first design</span>
+          <span>Controlled applicant volume</span>
+          <span>Role-based screening</span>
+        </div>
+          <div class="tagline">Together Forward</div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <img class="hireon-watermark" src="logo2.png" alt="" aria-hidden="true" />
+          <div class="hero-bento">
+            <div class="bento-card bento-large" data-tilt>
+              <div class="app-shell">
+                <div class="app-header">
+                  <span class="app-brand">
+                    <img class="app-icon" src="logo2.png" alt="HireOn app logo" />
+                    <span class="app-title">HireOn</span>
+                  </span>
+                  <span class="app-pill">Role-based</span>
+                </div>
+                <div class="app-body">
+                  <div class="app-row">
+                    <strong>Structured profiles</strong>
+                    <span>Mobile-first apply</span>
+                  </div>
+                  <div class="app-row">
+                    <strong>Qualification roles</strong>
+                    <span>Screen by intent</span>
+                  </div>
+                  <div class="app-row">
+                    <strong>Applicant volume</strong>
+                    <span>Set review limits</span>
+                  </div>
+                  <div class="app-row">
+                    <strong>Signal quality</strong>
+                    <span>Reduce false negatives</span>
+                  </div>
+                </div>
+                <div class="app-footer">Designed for early-career hiring teams</div>
+              </div>
+            </div>
+            <div class="bento-card bento-mini mini-1">
+              <p class="bento-label">Experience</p>
+              <strong class="bento-title">Candidate-first flow</strong>
+              <p class="bento-copy">Short, structured steps built for mobile completion.</p>
+            </div>
+            <div class="bento-card bento-mini accent mini-2">
+              <p class="bento-label">Employer control</p>
+              <strong class="bento-title">Intentional screening</strong>
+              <p class="bento-copy">Define roles, volumes, and review priorities.</p>
+            </div>
+            <div class="bento-card bento-mini mini-3">
+              <p class="bento-label">Signal</p>
+              <strong class="bento-title">Bias-aware matches</strong>
+              <p class="bento-copy">Reduce dependence on keyword density.</p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="snapshot">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Executive Summary Snapshot</p>
+          <h2>Competition submission details.</h2>
+          <p>Quick facts for judges and stakeholders to align on the core positioning.</p>
+        </div>
+        <div class="snapshot-grid">
+          <div class="snapshot-card" data-reveal>
+            <span>Startup name</span>
+            <strong>Evoltas</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>Product</span>
+            <strong>HireOn</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>Target sector</span>
+            <strong>Digital Enterprise</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>Sub-sector</span>
+            <strong>Workforce Solutions</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>Secondary sector</span>
+            <strong>Consumer Products &amp; Services</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>University</span>
+            <strong>Mississippi State University</strong>
+          </div>
+          <div class="snapshot-card" data-reveal>
+            <span>Submission date</span>
+            <strong>January 31, 2026</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Problem</p>
+          <h2>Hiring is overloaded while mobile applicants are underserved.</h2>
+          <p>
+            Job seekers increasingly rely on mobile devices, yet many job boards and career portals are not optimized
+            for true mobile application experiences. At the same time, applications per job have surged while open job
+            postings decline.
+          </p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card" data-reveal>
+            <h3>Job seekers</h3>
+            <ul>
+              <li>Desktop-centric hiring ecosystems are poorly optimized for mobile use.</li>
+              <li>Lengthy applications and repetitive data entry reduce completion rates.</li>
+              <li>Opaque AI screening processes contribute to user frustration.</li>
+            </ul>
+          </div>
+          <div class="problem-card" data-reveal>
+            <h3>Employers</h3>
+            <ul>
+              <li>Overwhelming applicant volume and limited recruiter bandwidth.</li>
+              <li>AI-assisted keyword filtering fails to surface qualified candidates.</li>
+              <li>Bias concerns with AI-driven screening tools.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="customer">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Customer Analysis</p>
+          <h2>HireOn serves employers and job seekers, with employers as primary revenue customers.</h2>
+        </div>
+        <div class="customer-grid">
+          <div class="customer-card" data-reveal>
+            <h3>Employers</h3>
+            <p>Small to mid-sized businesses, campus recruiters, and early-career hiring teams face:</p>
+            <ul>
+              <li>Overwhelming applicant volume.</li>
+              <li>Inefficient resume screening and recruiter time loss.</li>
+              <li>Applicant tracking systems reliant on keyword density.</li>
+            </ul>
+          </div>
+          <div class="customer-card" data-reveal>
+            <h3>Job seekers</h3>
+            <p>Students and recent graduates experience:</p>
+            <ul>
+              <li>Fragmented, desktop-centric application workflows.</li>
+              <li>Low mobile completion rates.</li>
+              <li>Frustration from opaque AI screening.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Solution</p>
+          <h2>HireOn reduces application friction while enabling intentional, role-based screening.</h2>
+          <p>
+            HireOn is a B2B, multi-sided SaaS platform that serves employers and job seekers. It enables candidates to
+            apply seamlessly from mobile devices and empowers employers to screen applicants through predefined,
+            qualification-based roles rather than keyword density.
+          </p>
+        </div>
+        <div class="feature-grid spotlight-grid">
+          <article class="feature-card spotlight-card" data-reveal>
+            <h3>Mobile-first design</h3>
+            <p>Built for smartphone use rather than adapted from desktop workflows.</p>
+          </article>
+          <article class="feature-card spotlight-card" data-reveal>
+            <h3>Role-based screening</h3>
+            <p>Applicants are screened through structured qualification roles.</p>
+          </article>
+          <article class="feature-card spotlight-card" data-reveal>
+            <h3>Controlled applicant volume</h3>
+            <p>Employers define how many applicants they review.</p>
+          </article>
+          <article class="feature-card spotlight-card" data-reveal>
+            <h3>Improved hiring signal</h3>
+            <p>Reduced false negatives and bias introduced by keyword-based AI filtering.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="product">
+      <div class="container product-grid">
+        <div class="product-panel" data-reveal>
+          <div class="role-toggle" role="tablist" aria-label="User roles">
+            <button class="toggle-btn active" data-role="recruiter" aria-pressed="true">Employer</button>
+            <button class="toggle-btn" data-role="candidate" aria-pressed="false">Job seeker</button>
+          </div>
+          <div class="toggle-panel">
+            <div class="panel active" data-role-panel="recruiter">
+              <h3>Employer workflow</h3>
+              <ul>
+                <li>Define qualification-based roles before screening begins.</li>
+                <li>Screen applicants by role-based profiles rather than keywords.</li>
+                <li>Specify the number of applicants to review.</li>
+                <li>Reduce applicant overload and improve signal quality.</li>
+              </ul>
+            </div>
+            <div class="panel" data-role-panel="candidate">
+              <h3>Job seeker workflow</h3>
+              <ul>
+                <li>Apply seamlessly from mobile devices.</li>
+                <li>Use structured, profile-based applications.</li>
+                <li>Experience reduced application friction on mobile.</li>
+                <li>Engage with a mobile-first hiring platform.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="product-visual" data-reveal>
+          <div class="journey-card">
+            <div class="journey-header">HireOn workflow</div>
+            <div class="journey-step"><span>01</span>Structured, profile-based applications</div>
+            <div class="journey-step"><span>02</span>AI extracts and organizes qualifications</div>
+            <div class="journey-step"><span>03</span>Qualification roles defined by employers</div>
+            <div class="journey-step"><span>04</span>Applicant volume set by employers</div>
+            <div class="journey-footer">Reduced friction and improved signal quality</div>
+          </div>
+          <div class="insight-grid">
+            <div class="insight-card">
+              <span>Mobile completion</span>
+              <strong>Shorter time-to-apply journeys</strong>
+            </div>
+            <div class="insight-card">
+              <span>Review focus</span>
+              <strong>Hire based on intent, not keywords</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Product and Technology</p>
+          <h2>Structured profiles and role-based screening powered by AI.</h2>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-reveal>
+            <h3>Profile-based applications</h3>
+            <p>Candidates apply through structured, profile-based workflows built for mobile.</p>
+          </div>
+          <div class="tech-card" data-reveal>
+            <h3>AI-extracted qualifications</h3>
+            <p>AI extracts and organizes candidate qualifications into role-based profiles.</p>
+          </div>
+          <div class="tech-card" data-reveal>
+            <h3>Employer-defined screening</h3>
+            <p>Employers specify the roles they seek and the number of applicants to review.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="market">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Market</p>
+          <h2>Recruitment technology is growing, with early-career hiring underserved.</h2>
+        </div>
+        <div class="market-grid">
+          <div class="metric-card" data-reveal>
+            <div class="metric-value" data-count="3.3" data-prefix="$" data-suffix="B">$3.3B</div>
+            <div class="metric-label">Recruitment software market in 2025</div>
+          </div>
+          <div class="metric-card" data-reveal>
+            <div class="metric-value" data-count="6" data-prefix="$" data-suffix="B">$6B</div>
+            <div class="metric-label">Projected recruitment software market by 2032</div>
+          </div>
+          <div class="metric-card" data-reveal>
+            <div class="metric-value" data-count="10" data-prefix="$" data-suffix="B+">$10B+</div>
+            <div class="metric-label">Talent acquisition platforms valued today</div>
+          </div>
+          <div class="metric-card" data-reveal>
+            <div class="metric-value" data-count="2.1" data-suffix="M+">2.1M+</div>
+            <div class="metric-label">Bachelor degrees conferred in Spring 2025</div>
+          </div>
+        </div>
+        <div class="market-callout" data-reveal>
+          <p>
+            HireOn initially targets U.S. early-career and entry-level hiring, including campus recruiting teams,
+            internships, and junior professional roles. The service obtainable market focuses on small to mid-sized
+            employers and campus recruiting teams, with expansion opportunities into broader enterprise hiring and
+            specialized workforce verticals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="differentiation">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Competitive Differentiation</p>
+          <h2>Focused, mobile-first design differentiates HireOn.</h2>
+          <p>
+            HireOn competes with LinkedIn, Indeed, and Handshake while offering a mobile-first alternative built for
+            intentional, role-based screening.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
+            <h3>Mobile-first design</h3>
+            <p>Purpose-built for smartphone use rather than adapted from desktop workflows.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <h3>Role-based screening</h3>
+            <p>Applicants are matched and screened through qualification-based roles.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <h3>Controlled applicant volume</h3>
+            <p>Employers determine how many applicants they review.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <h3>Improved hiring signal</h3>
+            <p>Reduced false negatives and bias from keyword-based AI filtering.</p>
+          </article>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-card" data-reveal>
+            <h3>Legacy hiring platforms</h3>
+            <ul>
+              <li>Desktop-first application flows.</li>
+              <li>Keyword-driven filtering that misses intent.</li>
+              <li>Unbounded applicant volume for recruiters.</li>
+            </ul>
+          </div>
+          <div class="compare-card highlight" data-reveal>
+            <h3>HireOn advantage</h3>
+            <ul>
+              <li>Structured mobile-first apply experience.</li>
+              <li>Role-based screening to surface fit.</li>
+              <li>Employer-controlled review volumes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tone" id="validation">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Validation</p>
+          <h2>Early validation and technical progress are underway.</h2>
+        </div>
+        <div class="validation-grid">
+          <div class="validation-card" data-reveal>
+            <h3>Early interest</h3>
+            <p>Students at Mississippi State University, the E-Center for Entrepreneurship, and campus recruiting
+              stakeholders identify mobile usability limitations and applicant overload as persistent challenges.</p>
+          </div>
+          <div class="validation-card" data-reveal>
+            <h3>Current development</h3>
+            <p>Core system architecture, product design, and user validation are underway.</p>
+          </div>
+          <div class="validation-card" data-reveal>
+            <h3>Technical validation</h3>
+            <p>Platform prototyping, user interviews, and pilot planning with early stakeholders support initial validation.</p>
+          </div>
+        </div>
+        <div class="signal-grid" data-reveal>
+          <div class="signal-card">
+            <div class="signal-value" data-count="48" data-suffix="%">48%</div>
+            <div class="signal-label">of hiring managers used AI to screen resumes by 2025</div>
+          </div>
+          <div class="signal-card">
+            <div class="signal-value" data-count="83" data-suffix="%">83%</div>
+            <div class="signal-label">projected AI screening adoption by end of 2025</div>
+          </div>
+          <div class="signal-card">
+            <div class="signal-value" data-count="67" data-suffix="%">67%</div>
+            <div class="signal-label">of employers acknowledge bias concerns with AI screening</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Team</p>
+          <h2>Multi-disciplinary founders with technical and startup experience.</h2>
+        </div>
+        <div class="team-grid">
+          <article class="team-card" data-reveal>
+            <img class="team-photo" src="images/devin.jpg" alt="Devin Chen" loading="lazy" />
+            <h3>Devin Chen</h3>
+            <p>Senior in cybersecurity with leadership in four working groups, Six Sigma Lean workflows, and programming expertise.</p>
+            <a class="team-link" href="https://www.linkedin.com/in/devin-chen-442751243/" target="_blank" rel="noopener">LinkedIn</a>
+          </article>
+          <article class="team-card" data-reveal>
+            <img class="team-photo" src="images/luca.jpg" alt="Luca Hoffmann Meyer" loading="lazy" />
+            <h3>Luca Hoffmann Meyer</h3>
+            <p>Computer engineering junior with client acquisition experience through a tennis coaching business in operation for over 3 years.</p>
+            <a class="team-link" href="https://www.linkedin.com/in/luca-hoffmann-meyer-592ab4352/" target="_blank" rel="noopener">LinkedIn</a>
+          </article>
+          <article class="team-card" data-reveal>
+            <img class="team-photo" src="images/marouane.jpg" alt="Marouane Benbrahim" loading="lazy" />
+            <h3>Marouane Benbrahim</h3>
+            <p>PhD student in computer science with research skills, software design experience, ownership of over 50 website domains, and deep knowledge of AI and LLMs.</p>
+            <a class="team-link" href="https://www.linkedin.com/in/marouane-benbrahim/" target="_blank" rel="noopener">LinkedIn</a>
+          </article>
+          <article class="team-card" data-reveal>
+            <img class="team-photo" src="images/kyla.jpg" alt="Kyla Mangum" loading="lazy" />
+            <h3>Kyla Mangum</h3>
+            <p>Senior in computer science with an AI concentration and Thrive in Five dual degree, with research and digital design skills.</p>
+            <a class="team-link" href="https://www.linkedin.com/in/kyla-mangum/" target="_blank" rel="noopener">LinkedIn</a>
+          </article>
+        </div>
+        <div class="advisor-card" data-reveal>
+          <img class="advisor-photo" src="images/nicholas.jpg" alt="Nicholas Pashos" loading="lazy" />
+          <div class="advisor-meta">
+            <span>Advisor</span>
+            <strong>Nicholas Pashos</strong>
+            <p>Director of the Center for Entrepreneurship &amp; Outreach (E-Center) in Mississippi State University’s College of Business and faculty advisor for HireOn. Holds a B.S. in Biomedical Engineering (Drexel University) and a Ph.D. in Bioinnovation (Tulane University). Led BioAesthetics to a $25,000 Women’s Health and Wellness Prize at the 2016 Rice Business Plan Competition and brings strategic guidance and mentorship.</p>
+            <a class="team-link" href="https://www.linkedin.com/in/ncpashos/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta-inner" data-reveal>
+          <h2>2026 RBPC Executive Summary</h2>
+          <p>Submission date: January 31, 2026</p>
+          <div class="cta-group center">
+            <a class="btn primary magnetic" href="mailto:dc2368@msstate.edu?subject=Evoltas%20Demo%20Request">Request a demo</a>
+            <a class="btn ghost magnetic" href="RBPC%20Financial%20Projections%20-%20Sheet1.pdf">Financial projections</a>
+            <a class="btn ghost magnetic" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Evoltas</h3>
+        <p>Building innovations that make everyday life more efficient and accessible.</p>
+      </div>
+      <div>
+        <h4>Submission</h4>
+        <ul>
+          <li>University: Mississippi State University</li>
+          <li>Date: January 31, 2026</li>
+          <li>Contact: dc2368@msstate.edu</li>
+        </ul>
+      </div>
+      <div>
+        <h4>References</h4>
+        <ul>
+          <li>RBPC Financial Projections - Sheet1.pdf</li>
+          <li>recruitingdaily.com/news/almost-70-of-2021-job-applications-were-made-from-mobile-devices/</li>
+          <li>hiring.monster.com/resources/recruiting-strategies/talent-acquisition/mobile-job-apply/</li>
+          <li>ashbyhq.com/blog/recruiting/2023-trends-report-applications-per-job</li>
+          <li>educationdata.org/number-of-college-graduates</li>
+          <li>blog.theinterviewguys.com/83-of-companies-will-use-ai-resume-screening-by-2025-despite-67-acknowledging-bias-concerns/</li>
+          <li>coherentmarketinsights.com/industry-reports/recruitment-software-market</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>2026 RBPC Executive Summary - Evoltas / HireOn</span>
+      <span>Together Forward</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
